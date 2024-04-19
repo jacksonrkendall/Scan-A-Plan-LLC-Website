@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+  <style>
+    header {
+      background-color: #bdbbb0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    
+    nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 70px; /* Adjust as needed */
+        left: 0;
+        background-color: #bdbbb0;
+      }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      margin: 0 10px;
+      
+    }
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      color: white;
+      order: 2; /* Move the menu icon to the right of the logo */
+    }
+
+    @media only screen and (max-width: 570px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu-icon {
+        display: block;
+        order: 1; /* Move the menu icon to the top */
+        margin-top: 10px; /* Adjust as needed */
+      }
+
+
+      nav.show {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    /* Styling for cards */
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px; /* Add some margin for the buffer */
+      font-family: 'Roboto', sans-serif; /* Specify the font-family */
+    }
+
+    /* Additional styling for paragraphs within cards */
+    .card p {
+      margin-bottom: 10px;
+      font-family: 'Roboto', sans-serif; /* Specify the font-family */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Your logo goes here -->
+    <img src="images/logo.png" alt="Your Logo" height="150">
+    <div class="menu-icon" onclick="toggleMenu">&#9776;</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <!-- Add more links as needed -->
+    </nav>
+  </header>
+
+  <!-- Interactive photo section -->
+  <img id="image" src="images/testimage.jpg" alt="Image" width="100%">
+
+  <!-- Example of cards with paragraphs -->
+  <div class="card">
+    <h2>Photography for Your Needs</h2>
+    <p>Whether you need to list your home for rent or sale, 
+        want to plan a renovation or restoration project, 
+        or create an online escape room, 
+        our services are exactly what you need.</p>
+  </div>
+
+  <div class="card">
+    <h2>3D Tours</h2>
+    <p>Headquartered in Madison county, we recognize the importance of 
+      reaching your potential clients through online listings and 
+      advertisements. Most of our clients do so using 3D Tours. 
+      Our 3D tours enable your potential clients to see your spaces 
+      in fantastic quality, making them more likely to pick your 
+      properties over another.</p>
+  </div>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Contact Us</h2>
+      <form>
+        
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
